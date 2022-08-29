@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recados</title>
+  <link rel="stylesheet" href="./css/recados.css">
+
+</head>
+
+<body>
+
+  <main class="main-recados">
+    <h1>Meus Recados</h1>
+
+    <div class="container-recados">
+      <div>
+        <form id="form-recados">
+          <div class="campos-form">
+            <div class="input-descricao">
+              <div class="textfield">
+                <label for="descricao">Descrição</label>
+                <input type="text" name="descricoes" id="descricao" placeholder="Descrição">
+              </div>
+            </div>
+
+            <div class="input-detalhamento">
+              <div class="textfield">
+                <label for="detalhamento">Detalhamento</label>
+                <input type="text" name="detalhamentos" id="detalhamento" placeholder="Detalhamento">
+              </div>
+            </div>
+          </div>
+
+          <div class="btns">
+            <input type="submit" class="btn" id="btn-sair" value="Sair">
+            <input type="button" class="btn" id="btn-salvar" value="Salvar">
+          </div>
+        </form>
+      </div>
+
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Descrição</th>
+              <th>Detalhamento</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+
+          <tbody id="corpo-tabela">
+
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!--modal  -->
+  <div id="modal">
+    <div id="modalEdit">
+        <form id="form-recados">
+          <div class="campos-form">
+            <div class="input-descricao">
+              <div class="textfield">
+                <label for="descricao">Descrição</label>
+                <input type="text" name="descricoes" id="descricaoEditModal" placeholder="Descrição">
+              </div>
+            </div>
+
+            <div class="input-detalhamento">
+              <div class="textfield">
+                <label for="detalhamento">Detalhamento</label>
+                <input type="text" name="detalhamentos" id="detalhamentoEditModal" placeholder="Detalhamento">
+              </div>
+            </div>
+          </div>
+
+          <div class="btns">
+            <input type="button" class="btn" id="btn-cancelar" value="Cancelar">
+            <input type="button" class="btn" id="btn-editar" value="Salvar">
+          </div>
+        </form>
+      </div>
+  </div>
+    <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js " > </script> 
+    <script src="./js/recados.js"></script>
+</body>
+
+</html>
