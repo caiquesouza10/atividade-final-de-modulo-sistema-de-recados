@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="../bootstrap-5.2.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="principal">
+        <section class="conteudo primeiro-conteudo">
+
+            <div class="primeira-coluna">
+                <h2 class="titulo titulo-branco">Olá amigo!</h2>
+                <p class="descricao descricao-branco">Entre com seus dados </p>
+                <p class="descricao descricao-branco">
+                    e comece sua jornada conosco</p>
+                <button id="signup" type="button" class="btn btn-success"
+                    style="background-color: transparent; border-color: #fff;">
+                    inscrever-se</button>
+            </div>
+
+            <div class="segunda-coluna">
+                <h2 class="titulo titulo-verde">Sistema de recados</h2>
+
+                <form class=" formulario" id="formulario" >
+                    <div class="form-floating mb-3 input" >
+                        <input type="email" class="form-control" placeholder="name@example.com" id="email-login" required>
+                        <label for="floatingInput">E-mail</label>
+                    </div>
+                    <div class="form-floating mb-3 input">
+                        <input type="password" class="form-control"placeholder="Password" id="senha-login" required>
+                        <label for="floatingPassword">Senha</label>
+                    </div>
+
+                    <!-- <a href="#" class="mb-3">Esqueceu sua senha?</a> -->
+                    <button type="submit" class="btn btn-success" id="btn-logar">Logar</button>
+                </form>
+
+            </div>
+        </section>
+
+                                        <!-- Segundo Conteudo "Cadastro" -->
+
+        <section class="conteudo segundo-conteudo">
+
+            <div class="primeira-coluna">
+                <h2 class="titulo titulo-branco">Já tenho conta!</h2>
+                <p class="descricao descricao-branco">para se manter conectado conosco</p>
+                <p class="descricao descricao-branco">por favor clique no botão abaixo para logar</p>
+                <button id="signin" type="button" class="btn btn-success"
+                    style="background-color: transparent; border-color: #fff;">Logar</button>
+            </div>
+
+            <div class="segunda-coluna">
+                <h2 class="titulo titulo-verde">Criar Conta</h2>
+               
+                <form class=" formulario" id="criar_conta" >
+                    <div class="form-floating mb-3 input" >
+                        <input type="email" class="form-control" placeholder="name@example.com" id="email-cadastrar" required>
+                        <label for="floatingInput">E-mail</label>
+                    </div>
+                    <div class="form-floating mb-3 input">
+                        <input type="password" class="form-control"placeholder="Senha" id="senha-cadastrar" required>
+                        <label for="floatingPassword">Senha</label>
+                    </div>
+                    <div class="form-floating mb-3 input">
+                        <input type="password" class="form-control"placeholder="Repetir Senha" id="confirma-senha" required>
+                        <label for="floatingPassword">Repetir Senha</label>
+                    </div>
+                    <button type="submit" class="btn btn-success" id="btn-salvar">criar conta</button>
+                </form>
+
+            </div>
+        </section>
+    </main>
+
+    <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js " > </script> 
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

@@ -18,6 +18,9 @@ function sair() {
 // atualiza recados do usuario logado
 let usuario = JSON.parse(localStorage.getItem('logado'));
 
+const idUsuario = document.getElementById('logado1')
+idUsuario.innerHTML = usuario.login
+
 imprimiRecados()
 
 function atualizaRecados() {
@@ -35,9 +38,10 @@ function atualizaRecados() {
 const btnSalvarRecados = document.getElementById('btn-salvar')
 btnSalvarRecados.addEventListener('click', criarRecados)
 
-let idRecados = 1
-
 function criarRecados() {
+
+  let idRecados = 1
+
   const descricao = document.getElementById('descricao').value
   const detalhamento = document.getElementById('detalhamento').value
 
@@ -50,12 +54,24 @@ function criarRecados() {
     return;
   }
 
+  if (usuario.recados.length > 0) {
+    const recadoMaiorId = usuario.recados.reduce((acc, next) => {
+      if (acc.idRecados < next.idRecados) {
+        return next
+      }
+
+      return acc
+    });
+
+    idRecados = recadoMaiorId.idRecados + 1
+  }
+
   usuario.recados.push({
     idRecados,
     descricao,
     detalhamento
   })
-  idRecados++
+ 
 
   localStorage.setItem('logado', JSON.stringify(usuario))
 
@@ -77,8 +93,8 @@ function imprimiRecados() {
               <td>${usuario.recados[index].descricao}</td>
               <td>${usuario.recados[index].detalhamento}</td>
               <td>
-              <button id="btnEditar" onclick = "editarRecados(${usuario.recados[index].idRecados})">Editar</button>
-              <button id="btnApagar" onclick = "apagarRecados(${usuario.recados[index].idRecados})">Excluir</button>
+              <button id="btnEditar" class="btnEditar" style="border-color: #fff;" onclick = "editarRecados(${usuario.recados[index].idRecados})" >Editar</button>
+              <button id="btnApagar" class="btnApagar" style="border-color: #fff;" onclick = "apagarRecados(${usuario.recados[index].idRecados})" >Excluir</button>
               </td>
             </tr>
     `
@@ -119,7 +135,7 @@ function apagarRecados(idRecados) {
 
         swal({
           buttons: false,
-          text: "Seu Recado esta seguro! Obigado por não apagar",
+          text: "Seu Recado esta seguro! Obrigado por não apagar",
         });
 
         setTimeout(() => {

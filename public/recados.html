@@ -5,14 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recados</title>
-  <link rel="stylesheet" href="./css/recados.css">
+  <link rel="stylesheet" href="./assets/css/recados.css">
+  <link rel="stylesheet" href="../bootstrap-5.2.0-dist/css/bootstrap.min.css">
 
 </head>
 
 <body>
 
   <main class="main-recados">
-    <h1>Meus Recados</h1>
+    <h1>Olá,<span id="logado1"></span></h1>
 
     <div class="container-recados">
       <div>
@@ -20,34 +21,32 @@
           <div class="campos-form">
             <div class="input-descricao">
               <div class="textfield">
-                <label for="descricao">Descrição</label>
                 <input type="text" name="descricoes" id="descricao" placeholder="Descrição">
               </div>
             </div>
 
             <div class="input-detalhamento">
               <div class="textfield">
-                <label for="detalhamento">Detalhamento</label>
                 <input type="text" name="detalhamentos" id="detalhamento" placeholder="Detalhamento">
               </div>
             </div>
           </div>
 
           <div class="btns">
-            <input type="submit" class="btn" id="btn-sair" value="Sair">
-            <input type="button" class="btn" id="btn-salvar" value="Salvar">
+            <input type="submit" class="btn btn-success" id="btn-sair" style="border-color: #fff;" value="Sair">
+            <input type="button" class="btn btn-success" id="btn-salvar" style="border-color: #fff;" value="Salvar">
           </div>
         </form>
       </div>
 
       <div>
-        <table>
+        <table class="table">
           <thead>
             <tr>
-              <th>#</th>
-              <th>Descrição</th>
-              <th>Detalhamento</th>
-              <th>Ações</th>
+              <th scope="col">#</th>
+              <th scope="col">Descrição</th>
+              <th scope="col">Detalhamento</th>
+              <th scope="col">Ações</th>
             </tr>
           </thead>
 
@@ -63,8 +62,9 @@
   <!--modal  -->
   <div id="modal">
     <div id="modalEdit">
-        <form id="form-recados">
+        <form  id="form-recados">
           <div class="campos-form">
+            
             <div class="input-descricao">
               <div class="textfield">
                 <label for="descricao">Descrição</label>
@@ -81,14 +81,14 @@
           </div>
 
           <div class="btns">
-            <input type="button" class="btn" id="btn-cancelar" value="Cancelar">
-            <input type="button" class="btn" id="btn-editar" value="Salvar">
+            <input type="button" class="btn btn-success" id="btn-cancelar" style="border-color: #fff;"value="Cancelar">
+            <input type="button" class="btn btn-success" id="btn-editar" style="border-color: #fff;" value="Salvar">
           </div>
         </form>
       </div>
   </div>
     <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js " > </script> 
-    <script src="./js/recados.js"></script>
+    <script src="./assets/js/recados.js"></script>
 </body>
 
 </html>

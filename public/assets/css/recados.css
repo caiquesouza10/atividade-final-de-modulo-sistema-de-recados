@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/vetor-de-fundo-de-tecnologia-digital-com-borda-de-hexagono-em-tom-roxo-escuro_53876-126069.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
+    opacity: 0.93;
+}
+
+
+h1 {
+    color: #f6ebf0;
+    font-family: 'Kanit', sans-serif;
+}
+
+.main-recados {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    padding: 30px 30px;
+    background: #2f2841;
+    border-radius: 20px;
+    box-shadow: 10px 40px 80px #00000093;
+    margin-top: 30px;
+}
+
+.campos-form {
+    display: flex;
+    width: 100%;
+}
+
+.input-descricao {
+    width: 50%;
+    margin: 2px;
+}
+
+.input-detalhamento {
+    width: 50%;
+    margin: 2px;
+}
+
+.textfield>label {
+    color: #fff3f0de;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.textfield>input {
+    display: inline-flex;
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+    margin: 15px 0px 5px 0px;
+}
+
+.textfield>input::placeholder {
+    color: #f8f0ff94;
+}
+
+.textfield>input:focus {
+    border-color: #00ff88;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    background-color: #00ff88;
+    border: none;
+    border-radius: 20px;
+    width: 15%;
+    margin: 20px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 1.2vw;
+    box-shadow: 0px 10px 10px -1px #00ff8052;
+}
+
+.btnEditar{
+    background-color: #8af3c2;
+    border: none;
+    border-radius: 20px;
+    width: 25%;
+    cursor: pointer;
+}
+
+.btnApagar{
+    background-color: #ee8b87;
+    border: none;
+    border-radius: 20px;
+    width: 25%;
+    cursor: pointer;
+}
+
+table th {
+    color: white;
+    background-color: #0bff8d6b;
+}
+
+table,
+th,
+td {
+    position: absolute 200px;
+    border: 1px solid #ffffff;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+
+th,
+td {
+    padding: 5px;
+    width: 300px;
+    color: #ffffff;
+}
+
+#logado1 {
+    color: #0bff8d6b;
+    margin: 20px;
+
+}
+
+
+/* Modal */
+
+#modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+}
+
+#modalEdit {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    background-color: #2f2841;;
+    border-radius: 10px;
+    width: 60%;
+    padding: 15px;
+    /* height: 42%; */
+    transform: translateY(-50%) translateX(-50%);
+}

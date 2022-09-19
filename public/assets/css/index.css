@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-image: url(../img/vetor-de-fundo-de-tecnologia-digital-com-borda-de-hexagono-em-tom-roxo-escuro_53876-126069.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    opacity: 0.93;
+}
+
+.conteudo {
+    background-color: white;
+    border-radius: 15px;
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.conteudo::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(54, 3, 70);
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    left: 0;
+}
+
+.titulo {
+    font-size: 28px;
+    font-weight: bold;
+    /* text-transform: capitalize; */
+    padding-bottom: 15px;
+}
+
+.titulo-branco {
+    color: #fff;
+    font-size: 40px;
+}
+
+.titulo-verde{
+    color: rgb(17, 80, 80);
+    font-size: 40px;
+
+}
+
+.descricao-branco {
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 40px;
+}
+
+.descricao-cinza{
+    color: #95a5a6;
+}
+
+.input{
+    width: 55%; 
+    margin: auto;
+}
+
+.btn {
+    text-transform: uppercase;
+    background-color: transparent; 
+    margin: auto;
+}
+
+.primeiro-conteudo {
+    display: flex;
+}
+
+.primeiro-conteudo .segunda-coluna{
+    z-index: 11;
+} 
+
+.primeira-coluna {
+    text-align: center;
+    /* flex: 1 0 auto; */
+    width: 40%;
+    z-index: 10;
+}
+
+.segunda-coluna {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    
+}
+
+a{
+    text-align: center;
+}
+
+.lista-midia-social {
+    display: flex;
+    list-style-type: none;
+}
+
+.item-social-media{
+    border: 2px solid #bdc3c7 ;
+    border-radius: 50% ;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    margin: 0 45px 0 20px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+
+}
+
+
+ /* segundo conteudo */
+
+ 
+.segundo-conteudo {
+    position: absolute;
+    display: flex;
+       
+}
+
+.segundo-conteudo .primeira-coluna{
+    order: 2;
+    z-index: -1;
+}
+
+.segundo-conteudo .segunda-coluna{
+    order: 1;   
+    z-index: -1;
+}
+
+/* .sign-up-js .primeiro-conteudo .segunda-coluna, */
+.sign-up-js .primeiro-conteudo .primeira-coluna {
+    z-index: -1;
+}
+
+
+.sign-up-js .segundo-conteudo .segunda-coluna {
+    z-index: 11;
+}
+
+.sign-up-js .segundo-conteudo .primeira-coluna{
+    z-index: 13;
+}
+
+.sign-up-js .conteudo::before{
+    left: 60%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    animation: slidein 2s;
+
+    z-index: 12;
+}
+
+.sign-in-js .conteudo::before{
+    animation: slideout 2s;
+
+    z-index: 12;
+}
+
+
+.sign-in-js .segundo-conteudo .primeira-coluna,
+.sign-in-js .segundo-conteudo .segunda-coluna {
+    z-index: -1;
+}
+
+
+.sign-in-js .primeiro-conteudo .segunda-coluna {
+    z-index: 11;
+}
+
+.sign-in-js .primeiro-conteudo .primeira-coluna{
+    z-index: 13;
+}
+
+/* Deslocamento do conteudo atras da animação */
+
+.sign-up-js .primeiro-conteudo .segunda-coluna{
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoLogar 2s;
+}
+
+.sign-in-js .segundo-conteudo .segunda-coluna{
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoCriarConta 2s;
+}
+
+@keyframes deslocamentoLogar{
+    from{
+        left: 0;
+        opacity: 1;
+        z-index: 12;
+    }
+
+    to{
+        left: -110px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes deslocamentoCriarConta{
+    from{
+        left: 0;
+        opacity: 1;
+        z-index: 12;
+    }
+
+    to{
+        left: 110px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+
+/* Animação CSS */
+
+@keyframes slidein {
+    from{
+        left: 0;
+        width: 40%;
+    }
+
+    /* 25% {
+        left: 5%;
+        width: 50%;
+    } */
+
+    50%{
+        left: 25%;
+        width: 60%;
+    }
+
+    /* 75%{
+        left: 45%;
+        width: 50%;
+    } */
+    to {
+        left: 60%;
+        width: 40%;
+    }
+}
+
+@keyframes slideout {
+
+    from {
+        left: 60%;
+        width: 40%;
+    }
+
+    /* 25% {
+        left: 45%;
+        width: 50%;
+    } */
+
+    50% {
+        left: 25%;
+        width: 60%;
+    }
+
+    /* 75% {
+        left: 5%;
+        width: 50%;
+    } */
+
+    to {
+        left: 0;
+        width: 40%;
+    }
+}
+
